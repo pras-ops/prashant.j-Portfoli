@@ -4,7 +4,8 @@
 <head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="icon" href=https://pras-ops.github.io/prashant.j-Portfolio/fav.png type="image/gif">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav1.png type="image/gif">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,20 +24,20 @@
 </noscript>
 
 
-<link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/css/font.css" media="all">
+<link rel="stylesheet" href="/css/font.css" media="all">
 
 
 
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-43BC2MRVRW"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-43BC2MRVRW', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-43BC2MRVRW', { 'anonymize_ip': false });
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 <meta property="og:title" content="Markdown syntax" />
 <meta property="og:description" content="Text about my cool site" />
@@ -49,11 +50,11 @@ if (!doNotTrack) {
 <meta name="twitter:description" content="Text about my cool site"/>
 
 
-<link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/css/header.css" media="all">
-<link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/css/footer.css" media="all">
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
 
 
-<link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/css/theme.css" media="all">
+<link rel="stylesheet" href="/css/theme.css" media="all">
 
 
 
@@ -81,10 +82,37 @@ if (!doNotTrack) {
         line-height: 1.5;
         text-align: left;
     }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
 </style>
 
 <meta name="description" content="Markdown syntax of Pj">
-<link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/css/list.css" media="all">
+<link rel="stylesheet" href="/css/list.css" media="all">
 
   <title>
 Markdown syntax | Pj
@@ -92,18 +120,26 @@ Markdown syntax | Pj
   </title>
 </head>
 
-<body class="light" onload="loading()">
+<body class="light">
   
   
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
 </script>
 
 
@@ -112,13 +148,15 @@ Markdown syntax | Pj
     <nav class="pt-3 navbar navbar-expand-lg animate">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             
-            <a class="navbar-brand primary-font text-wrap" href="https://pras-ops.github.io/prashant.j-Portfolio/">
+            <a class="navbar-brand primary-font text-wrap" href="/prashant.j-Portfolio">
                 
-                <img src="https://pras-ops.github.io/prashant.j-Portfolio/fav.png" width="30" height="30"
+                <img src="/fav1.png" width="30" height="30"
                     class="d-inline-block align-top">
                 Pj
                 
             </a>
+
+            
 
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
@@ -132,72 +170,89 @@ Markdown syntax | Pj
             <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
                 <ul class="navbar-nav ms-auto text-center">
                     
+
+                    
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://pras-ops.github.io/prashant.j-Portfolio/#about" aria-label="about">About</a>
+                        <a class="nav-link" href="/prashant.j-Portfolio#about" aria-label="about">
+                            About Me
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://pras-ops.github.io/prashant.j-Portfolio/#experience"
-                            aria-label="experience">Experience</a>
+                        <a class="nav-link" href="/prashant.j-Portfolio#experience"
+                            aria-label="experience">
+                            Experience
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://pras-ops.github.io/prashant.j-Portfolio/#education"
-                            aria-label="education">Education</a>
+                        <a class="nav-link" href="/prashant.j-Portfolio#education"
+                            aria-label="education">
+                            Education
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://pras-ops.github.io/prashant.j-Portfolio/#projects"
-                            aria-label="projects">Projects</a>
+                        <a class="nav-link" href="/prashant.j-Portfolio#projects"
+                            aria-label="projects">
+                            Projects
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://pras-ops.github.io/prashant.j-Portfolio/#achievements"
-                            aria-label="achievements">Achievements</a>
+                        <a class="nav-link" href="/prashant.j-Portfolio#achievements"
+                            aria-label="achievements">
+                            Achievements
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://pras-ops.github.io/prashant.j-Portfolio/#contact"
-                            aria-label="contact">Contact</a>
+                        <a class="nav-link" href="/prashant.j-Portfolio#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
                     </li>
                     
 
                     
                     
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
                 </ul>
 
-                
-                
-                <div class="text-center">
-                    <button id="theme-toggle">
-                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                    </button>
-                </div>
-            
-                
             </div>
         </div>
     </nav>
@@ -208,18 +263,56 @@ Markdown syntax | Pj
     <div class="row">
         
         <div class="col-lg-4 col-md-6 my-3">
-            <div class="card h-100">
-                <div class="card-body bg-transparent p-4 shadow-sm">
-                    <a href="https://pras-ops.github.io/prashant.j-Portfolio/blogs/markdown-syntax/" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="Markdown Syntax">Markdown Syntax</h5>
-                    </a>
-                    <div class="card-text secondary-font">
-                        <p><p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p></p>
+            <div class="card-columns">
+                <div class="card h-100">
+                    
+                    <div class="card-header">
+                        <a href="/prashant.j-Portfolio/blogs/math/">
+                            <img src="/images/mathjax.png" class="card-img-top" alt="Render Math With Mathjax">
+                        </a>
+                    </div>
+                    
+                    <div class="card-body bg-transparent p-4 shadow-sm">
+                        <a href="/prashant.j-Portfolio/blogs/math/" class="primary-font card-title">
+                            <h5 class="card-title bg-transparent" title="Render Math With Mathjax">Render Math With Mathjax</h5>
+                        </a>
+                        <div class="card-text secondary-font">
+                            <p>Mathjax Math equations can be rendered using Mathjax syntax with AMS symbol support.
+Optionally enable this on a per-page basis by adding mathjax: true to your frontmatter.
+Then, use $$ ... $$ on a line by itself to render a block equation:
+$$ | Pr_{x \leftarrow P_{1}} [A(x) = 1] - Pr_{x \leftarrow …</p>
+                        </div>
+                    </div>
+                    <div class="mt-auto post-footer bg-transparent py-3">
+                        <span class="float-start bg-transparent">Dec 9, 2022</span>
+                        <a href="/prashant.j-Portfolio/blogs/math/" class="float-end btn btn-outline-info btn-sm">Read</a>
                     </div>
                 </div>
-                <div class="mt-auto post-footer bg-transparent py-3">
-                    <span class="float-start bg-transparent">April 3, 2021</span>
-                    <a href="https://pras-ops.github.io/prashant.j-Portfolio/blogs/markdown-syntax/" class="float-end btn btn-outline-info btn-sm">Read</a>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 my-3">
+            <div class="card-columns">
+                <div class="card h-100">
+                    
+                    <div class="card-header">
+                        <a href="/prashant.j-Portfolio/blogs/markdown-syntax/">
+                            <img src="/images/post.jpg" class="card-img-top" alt="Markdown Syntax">
+                        </a>
+                    </div>
+                    
+                    <div class="card-body bg-transparent p-4 shadow-sm">
+                        <a href="/prashant.j-Portfolio/blogs/markdown-syntax/" class="primary-font card-title">
+                            <h5 class="card-title bg-transparent" title="Markdown Syntax">Markdown Syntax</h5>
+                        </a>
+                        <div class="card-text secondary-font">
+                            <p>Paragraph Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus …</p>
+                        </div>
+                    </div>
+                    <div class="mt-auto post-footer bg-transparent py-3">
+                        <span class="float-start bg-transparent">Apr 3, 2021</span>
+                        <a href="/prashant.j-Portfolio/blogs/markdown-syntax/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -286,8 +379,14 @@ Markdown syntax | Pj
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
             <div class="pb-2">
-                <a href="https://pras-ops.github.io/prashant.j-Portfolio/" title="Pj">
-</footer><script src="https://pras-ops.github.io/prashant.j-Portfolio/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+                </a>
+            </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 <script>
     if (document.body.className.includes("dark")) {
         document.body.classList.remove('dark');
@@ -314,18 +413,17 @@ Markdown syntax | Pj
 
 </script>
 
-<script>
-    let loadingIcons;
 
-    function loading() {
-        myVar = setTimeout(showPage, 100);
-    }
 
-    function showPage() {
-        try{
-            document.getElementById("loading-icons").style.display = "block";
-        } catch(err) {}
-    }
-</script></body>
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
 
 </html>

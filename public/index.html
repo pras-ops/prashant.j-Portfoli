@@ -5,7 +5,8 @@
 	<meta name="generator" content="Hugo 0.104.1" /><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="icon" href=https://pras-ops.github.io/prashant.j-Portfolio/fav.png type="image/gif">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav1.png type="image/gif">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,20 +25,20 @@
 </noscript>
 
 
-<link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/css/font.css" media="all">
+<link rel="stylesheet" href="/css/font.css" media="all">
 
 
 
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-43BC2MRVRW"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-43BC2MRVRW', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-43BC2MRVRW', { 'anonymize_ip': false });
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 <meta property="og:title" content="Pj" />
 <meta property="og:description" content="Text about my cool site" />
@@ -50,11 +51,11 @@ if (!doNotTrack) {
 <meta name="twitter:description" content="Text about my cool site"/>
 
 
-<link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/css/header.css" media="all">
-<link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/css/footer.css" media="all">
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
 
 
-<link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/css/theme.css" media="all">
+<link rel="stylesheet" href="/css/theme.css" media="all">
 
 
 
@@ -82,14 +83,41 @@ if (!doNotTrack) {
         line-height: 1.5;
         text-align: left;
     }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
 </style>
 
 <meta name="description" content=Text&#32;about&#32;my&#32;cool&#32;site>
-<link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/css/index.css" media="all">
-<link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/css/projects.css" media="all">
+<link rel="stylesheet" href="/css/index.css" media="all">
+<link rel="stylesheet" href="/css/projects.css" media="all">
 
 
-<script defer src="https://pras-ops.github.io/prashant.j-Portfolio/fontawesome-5/all-5.15.4.js"></script>
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
 
   <title>
 Pj
@@ -97,18 +125,26 @@ Pj
   </title>
 </head>
 
-<body class="light" onload="loading()">
+<body class="light">
   
   
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
 </script>
 
 
@@ -117,13 +153,15 @@ Pj
     <nav class="pt-3 navbar navbar-expand-lg animate">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             
-            <a class="navbar-brand primary-font text-wrap" href="https://pras-ops.github.io/prashant.j-Portfolio/">
+            <a class="navbar-brand primary-font text-wrap" href="/prashant.j-Portfolio">
                 
-                <img src="https://pras-ops.github.io/prashant.j-Portfolio/fav.png" width="30" height="30"
+                <img src="/fav1.png" width="30" height="30"
                     class="d-inline-block align-top">
                 Pj
                 
             </a>
+
+            
 
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
@@ -137,72 +175,89 @@ Pj
             <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
                 <ul class="navbar-nav ms-auto text-center">
                     
+
+                    
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://pras-ops.github.io/prashant.j-Portfolio/#about" aria-label="about">About</a>
+                        <a class="nav-link" href="/prashant.j-Portfolio#about" aria-label="about">
+                            About Me
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://pras-ops.github.io/prashant.j-Portfolio/#experience"
-                            aria-label="experience">Experience</a>
+                        <a class="nav-link" href="/prashant.j-Portfolio#experience"
+                            aria-label="experience">
+                            Experience
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://pras-ops.github.io/prashant.j-Portfolio/#education"
-                            aria-label="education">Education</a>
+                        <a class="nav-link" href="/prashant.j-Portfolio#education"
+                            aria-label="education">
+                            Education
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://pras-ops.github.io/prashant.j-Portfolio/#projects"
-                            aria-label="projects">Projects</a>
+                        <a class="nav-link" href="/prashant.j-Portfolio#projects"
+                            aria-label="projects">
+                            Projects
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://pras-ops.github.io/prashant.j-Portfolio/#achievements"
-                            aria-label="achievements">Achievements</a>
+                        <a class="nav-link" href="/prashant.j-Portfolio#achievements"
+                            aria-label="achievements">
+                            Achievements
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://pras-ops.github.io/prashant.j-Portfolio/#contact"
-                            aria-label="contact">Contact</a>
+                        <a class="nav-link" href="/prashant.j-Portfolio#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
                     </li>
                     
 
                     
                     
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
                 </ul>
 
-                
-                
-                <div class="text-center">
-                    <button id="theme-toggle">
-                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                    </button>
-                </div>
-            
-                
             </div>
         </div>
     </nav>
@@ -227,12 +282,15 @@ Pj
                 <div class="row">
                     <div class="col-auto h-100">
                         
-                        <a href="https://drive.google.com/file/d/1RvUXANYXv299viWdRNFCW3MLgRGHzHyJ/view?usp=sharing" class="btn" download>
+                        <a href="https://drive.google.com/file/d/1RvUXANYXv299viWdRNFCW3MLgRGHzHyJ/view?usp=sharing" class="btn" ZgotmplZ
+			  
+                          target="_blank"
+                          >
                             Resume
                         </a>
                         
                     </div>
-                    <div class="col-auto px-0 h-100"><span id="loading-icons" style="display: none;">
+                    <div class="col-auto px-0 h-100"><span>
     
     <span class="px-1">
         <a href="https://github.com/pras-ops" target="_blank" class="btn social-icon">
@@ -254,8 +312,8 @@ Pj
             <div class="col-sm-12 col-md-12 col-lg-4">
                 <div class="row justify-content-center">
                     <div class="col-sm-12 col-md-9 pt-5 image animate px-5 px-md-5 px-lg-0 text-center">
-                        <img src="https://pras-ops.github.io/prashant.j-Portfolio/images/me6.jpeg" 
-                            class="img-thumbnail mx-auto" 
+                        <img src="/images/me6.jpeg"
+                            class="img-thumbnail mx-auto"
                             alt=""
                         >
                     </div>
@@ -263,6 +321,7 @@ Pj
             </div>
         </div>
     </div>
+    
     <div class="hero-bottom-svg d-md-block d-lg-block d-none">
         <svg xmlns="http://www.w3.org/2000/svg" width="201" height="201" viewBox="0 0 201 201">
             <g id="Group_1168" data-name="Group 1168" transform="translate(-384 -1392)">
@@ -525,6 +584,7 @@ Pj
             </g>
         </svg>
     </div>
+    
 </section>
 
 <section id="about" class="py-0 py-sm-5">
@@ -534,7 +594,7 @@ Pj
             
             <div class="col-sm-12 col-md-8 col-lg-4 mb-5 mb-sm-0 mb-md-5 mb-lg-0 d-none d-sm-none d-md-block">
                 <div class="image d-flex px-5">
-                    <img src="https://pras-ops.github.io/prashant.j-Portfolio/images/me3.png" class="img-thumbnail mx-auto rounded-circle" alt="">
+                    <img src="/images/me3.png" class="img-thumbnail mx-auto rounded-circle" alt="">
                 </div>
             </div>
             
@@ -580,7 +640,7 @@ Pj
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-8 col-lg-8 py-5">
                 <div class="experience-container px-3 pt-2">
-                    <ul class="nav nav-pills mb-3 bg-transparent" id="pills-tab" role="tablist">
+                    <ul class="nav nav-pills mb-3 bg-transparent primary-font" id="pills-tab" role="tablist">
                         
                         
                         <li class="nav-item px-1 bg-transparent" role="presentation">
@@ -686,7 +746,7 @@ Pj
 
                             <p>Performed data analysis using Excel and utilized Tableau for data-driven recommendations, improving business strategies and client settlements.</p>
 <ul>
-<li>Demonstrated proficient in communicating with technical and non-technical stakeholders.</li>
+<li>Demonstrated proficient in communicating with technical and non-technical stakeholder</li>
 </ul>
 
                         </div>
@@ -822,6 +882,7 @@ Pj
     </div>
 </section>
 
+
 <section id="education" class="py-5">
     <div class="container">
         <h3 class="text-center">Education</h3>
@@ -935,15 +996,17 @@ Pj
         <div class="row justify-content-center px-3 px-md-5">
             
             <div class="col-lg-4 col-md-6 my-3">
-                <div class="card my-3 h-100" title="Financial Complaint KPI Dashboard(Tableau)">
+                <div class="card my-3 h-100" title="Financial Complaint KPI Dashboard">
                     <div class="card-head">
-                        <img class="card-img-top" src="https://pras-ops.github.io/prashant.j-Portfolio/images/projects/profile3.png" alt="Financial Complaint KPI Dashboard(Tableau)">
+                        <img class="card-img-top" src="/images/projects/profile3.png" alt="Financial Complaint KPI Dashboard">
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
                             
+                            <span class="badge badge-secondary">Tableau</span>
+                            
                         </div>
-                        <h5 class="card-title bg-transparent mt-1">Financial Complaint KPI Dashboard(Tableau)</h5>
+                        <h5 class="card-title bg-transparent mt-1">Financial Complaint KPI Dashboard</h5>
                         <div class="card-text bg-transparent secondary-font">
                             The dashboard is an example focusing on financial complaints by state, total number of complaints and complaints by issue. There are two more views specifically focusing on disputed rate and resolved at no cost.
                         </div>
@@ -959,7 +1022,7 @@ Pj
                         
                         
                         <span class="float-end">
-                            <a class="btn btn-sm" href="https://public.tableau.com/views/FinancialComplaintsDashboardRWFD_16645087186720/Dashboard?:language=en-US&amp;publish=yes&amp;:display_count=n&amp;:origin=viz_share_link" target="_blank">
+                            <a class="btn btn-sm" href="https://public.tableau.com/app/profile/prashant.jacob/viz/FinancialComplaintsDashboardRWFD_16645087186720/Dashboard" target="_blank">
                                 Demo
                             </a>
                         </span>
@@ -970,15 +1033,17 @@ Pj
             </div>
             
             <div class="col-lg-4 col-md-6 my-3">
-                <div class="card my-3 h-100" title="Retail Sales KPI Dashboard (Tableau)">
+                <div class="card my-3 h-100" title="Retail Sales KPI Dashboard">
                     <div class="card-head">
-                        <img class="card-img-top" src="https://pras-ops.github.io/prashant.j-Portfolio/images/projects/Retail%20Sales%20KPI%20Dashboard.jpg" alt="Retail Sales KPI Dashboard (Tableau)">
+                        <img class="card-img-top" src="/images/projects/Retail%20Sales%20KPI%20Dashboard.jpg" alt="Retail Sales KPI Dashboard">
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
                             
+                            <span class="badge badge-secondary">Tableau</span>
+                            
                         </div>
-                        <h5 class="card-title bg-transparent mt-1">Retail Sales KPI Dashboard (Tableau)</h5>
+                        <h5 class="card-title bg-transparent mt-1">Retail Sales KPI Dashboard</h5>
                         <div class="card-text bg-transparent secondary-font">
                             Often, companies have sales data that contain a lot of hidden information. Asking the right questions and analyzing the data will give you relevant insights. The goal is to answer the right questions that will help the company to make the right sales decisions.
                         </div>
@@ -1005,15 +1070,17 @@ Pj
             </div>
             
             <div class="col-lg-4 col-md-6 my-3">
-                <div class="card my-3 h-100" title="Sales Data Analysis Dashboard (Tableau)">
+                <div class="card my-3 h-100" title="Sales Data Analysis Dashboard">
                     <div class="card-head">
-                        <img class="card-img-top" src="https://pras-ops.github.io/prashant.j-Portfolio/images/projects/Sales%20Data%20Analysis%20Dashboard.png" alt="Sales Data Analysis Dashboard (Tableau)">
+                        <img class="card-img-top" src="/images/projects/Sales%20Data%20Analysis%20Dashboard.png" alt="Sales Data Analysis Dashboard">
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
                             
+                            <span class="badge badge-secondary">Tableau</span>
+                            
                         </div>
-                        <h5 class="card-title bg-transparent mt-1">Sales Data Analysis Dashboard (Tableau)</h5>
+                        <h5 class="card-title bg-transparent mt-1">Sales Data Analysis Dashboard</h5>
                         <div class="card-text bg-transparent secondary-font">
                             Sales data is enormously powerful and it’s something you come by just by tracking your activities effectively. Knowing how to fully utilize it will revolutionize your sales process, leading to better lead generation, client engagement and retention and, ultimately, more sales.
                         </div>
@@ -1040,15 +1107,17 @@ Pj
             </div>
             
             <div class="col-lg-4 col-md-6 my-3">
-                <div class="card my-3 h-100" title="Car Price Predictions Summary (PowerBI)">
+                <div class="card my-3 h-100" title="Car Price Predictions Summary">
                     <div class="card-head">
-                        <img class="card-img-top" src="https://pras-ops.github.io/prashant.j-Portfolio/images/projects/Linear%20Regression%20Predictions_page-0001.jpg" alt="Car Price Predictions Summary (PowerBI)">
+                        <img class="card-img-top" src="/images/projects/Linear%20Regression%20Predictions_page-0001.jpg" alt="Car Price Predictions Summary">
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
                             
+                            <span class="badge badge-secondary">Power BI</span>
+                            
                         </div>
-                        <h5 class="card-title bg-transparent mt-1">Car Price Predictions Summary (PowerBI)</h5>
+                        <h5 class="card-title bg-transparent mt-1">Car Price Predictions Summary</h5>
                         <div class="card-text bg-transparent secondary-font">
                             A car price prediction summary is an estimate of the future price on the bases of a car based on the features it can offer a customer like an Engine Size, Number of doors, Wheelbase etc.
                         </div>
@@ -1069,15 +1138,17 @@ Pj
             </div>
             
             <div class="col-lg-4 col-md-6 my-3">
-                <div class="card my-3 h-100" title="Overall Performance Summary (PowerBI)">
+                <div class="card my-3 h-100" title="Overall Performance Summary">
                     <div class="card-head">
-                        <img class="card-img-top" src="https://pras-ops.github.io/prashant.j-Portfolio/images/projects/profile4.png" alt="Overall Performance Summary (PowerBI)">
+                        <img class="card-img-top" src="/images/projects/profile4.png" alt="Overall Performance Summary">
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
                             
+                            <span class="badge badge-secondary">Power BI</span>
+                            
                         </div>
-                        <h5 class="card-title bg-transparent mt-1">Overall Performance Summary (PowerBI)</h5>
+                        <h5 class="card-title bg-transparent mt-1">Overall Performance Summary</h5>
                         <div class="card-text bg-transparent secondary-font">
                             An overall performance summary shows that a company creates to measure and define the company’s overall success. Performance reports monitor and analyze the business’ financial data to determine how well they are performing overall.
                         </div>
@@ -1098,15 +1169,17 @@ Pj
             </div>
             
             <div class="col-lg-4 col-md-6 my-3">
-                <div class="card my-3 h-100" title="Sales Overview (PowerBI)">
+                <div class="card my-3 h-100" title="Sales Overview">
                     <div class="card-head">
-                        <img class="card-img-top" src="https://pras-ops.github.io/prashant.j-Portfolio/images/projects/Episode%204%20-%20Sales%20Report_Finished_page-0001.jpg" alt="Sales Overview (PowerBI)">
+                        <img class="card-img-top" src="/images/projects/Episode%204%20-%20Sales%20Report_Finished_page-0001.jpg" alt="Sales Overview">
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
                             
+                            <span class="badge badge-secondary">Power BI</span>
+                            
                         </div>
-                        <h5 class="card-title bg-transparent mt-1">Sales Overview (PowerBI)</h5>
+                        <h5 class="card-title bg-transparent mt-1">Sales Overview</h5>
                         <div class="card-text bg-transparent secondary-font">
                             A sales overview dashboard is a collection of metrics, quantitative data and qualitative inputs that helps to evaluate sales performance within a team, region, division or organization.
                         </div>
@@ -1127,15 +1200,17 @@ Pj
             </div>
             
             <div class="col-lg-4 col-md-6 my-3">
-                <div class="card my-3 h-100" title="Sales Revenue Analysis Report (Excel)">
+                <div class="card my-3 h-100" title="Sales Revenue Analysis Report">
                     <div class="card-head">
-                        <img class="card-img-top" src="https://pras-ops.github.io/prashant.j-Portfolio/images/projects/Screenshot%20%2836%29.png" alt="Sales Revenue Analysis Report (Excel)">
+                        <img class="card-img-top" src="/images/projects/Screenshot%20%2836%29.png" alt="Sales Revenue Analysis Report">
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
                             
+                            <span class="badge badge-secondary">Excel</span>
+                            
                         </div>
-                        <h5 class="card-title bg-transparent mt-1">Sales Revenue Analysis Report (Excel)</h5>
+                        <h5 class="card-title bg-transparent mt-1">Sales Revenue Analysis Report</h5>
                         <div class="card-text bg-transparent secondary-font">
                             A revenue analysis is a detailed report of the total revenue generated by all company activities. They are utilized by companies to indicate areas in which they can increase revenue with the least effort. A revenue analysis can reveal which products or services sell better or which areas need improvement.
                         </div>
@@ -1156,15 +1231,17 @@ Pj
             </div>
             
             <div class="col-lg-4 col-md-6 my-3">
-                <div class="card my-3 h-100" title="Performance Dashboard (Excel)">
+                <div class="card my-3 h-100" title="Performance Dashboard">
                     <div class="card-head">
-                        <img class="card-img-top" src="https://pras-ops.github.io/prashant.j-Portfolio/images/projects/Screenshot%20%2837%29.png" alt="Performance Dashboard (Excel)">
+                        <img class="card-img-top" src="/images/projects/Screenshot%20%2837%29.png" alt="Performance Dashboard">
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
                             
+                            <span class="badge badge-secondary">Excel</span>
+                            
                         </div>
-                        <h5 class="card-title bg-transparent mt-1">Performance Dashboard (Excel)</h5>
+                        <h5 class="card-title bg-transparent mt-1">Performance Dashboard</h5>
                         <div class="card-text bg-transparent secondary-font">
                             Performance dashboard compare results in relation to prior years&#39; results in order to show whether performance is stable, improving or declining. The purpose is to better contextualize the performance information in relation to historical performance and targets or goals that might have been set.
                         </div>
@@ -1185,15 +1262,17 @@ Pj
             </div>
             
             <div class="col-lg-4 col-md-6 my-3">
-                <div class="card my-3 h-100" title="Management Information System (MIS) report(Excel)">
+                <div class="card my-3 h-100" title="Management Information System (MIS) report">
                     <div class="card-head">
-                        <img class="card-img-top" src="https://pras-ops.github.io/prashant.j-Portfolio/images/projects/profile6.png" alt="Management Information System (MIS) report(Excel)">
+                        <img class="card-img-top" src="/images/projects/profile6.png" alt="Management Information System (MIS) report">
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
                             
+                            <span class="badge badge-secondary">Excel</span>
+                            
                         </div>
-                        <h5 class="card-title bg-transparent mt-1">Management Information System (MIS) report(Excel)</h5>
+                        <h5 class="card-title bg-transparent mt-1">Management Information System (MIS) report</h5>
                         <div class="card-text bg-transparent secondary-font">
                             Management Information System(MIS) reports help management to assess the performance of the organization and allows for faster decision-making.
                         </div>
@@ -1216,10 +1295,12 @@ Pj
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card my-3 h-100" title="SQL Case Study">
                     <div class="card-head">
-                        <img class="card-img-top" src="https://pras-ops.github.io/prashant.j-Portfolio/images/projects/Screenshot%20%2835%29.png" alt="SQL Case Study">
+                        <img class="card-img-top" src="/images/projects/Screenshot%20%2835%29.png" alt="SQL Case Study">
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
+                            
+                            <span class="badge badge-secondary">MySql</span>
                             
                         </div>
                         <h5 class="card-title bg-transparent mt-1">SQL Case Study</h5>
@@ -1245,10 +1326,12 @@ Pj
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card my-3 h-100" title="SQL Case Study">
                     <div class="card-head">
-                        <img class="card-img-top" src="https://pras-ops.github.io/prashant.j-Portfolio/images/projects/Screenshot%20%28393%29.png" alt="SQL Case Study">
+                        <img class="card-img-top" src="/images/projects/Screenshot%20%28393%29.png" alt="SQL Case Study">
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
+                            
+                            <span class="badge badge-secondary">MySql</span>
                             
                         </div>
                         <h5 class="card-title bg-transparent mt-1">SQL Case Study</h5>
@@ -1274,10 +1357,12 @@ Pj
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card my-3 h-100" title="SQL Case Study">
                     <div class="card-head">
-                        <img class="card-img-top" src="https://pras-ops.github.io/prashant.j-Portfolio/images/projects/star%20schema.webp" alt="SQL Case Study">
+                        <img class="card-img-top" src="/images/projects/star%20schema.webp" alt="SQL Case Study">
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
+                            
+                            <span class="badge badge-secondary">MySql</span>
                             
                         </div>
                         <h5 class="card-title bg-transparent mt-1">SQL Case Study</h5>
@@ -1303,10 +1388,12 @@ Pj
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card my-3 h-100" title="Exploratory Data Analysis on Sales Data">
                     <div class="card-head">
-                        <img class="card-img-top" src="https://pras-ops.github.io/prashant.j-Portfolio/images/projects/download.png" alt="Exploratory Data Analysis on Sales Data">
+                        <img class="card-img-top" src="/images/projects/download.png" alt="Exploratory Data Analysis on Sales Data">
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
+                            
+                            <span class="badge badge-secondary">Python</span>
                             
                         </div>
                         <h5 class="card-title bg-transparent mt-1">Exploratory Data Analysis on Sales Data</h5>
@@ -1332,10 +1419,12 @@ Pj
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card my-3 h-100" title="Exploratory Data Analysis on Travel Insurance Data">
                     <div class="card-head">
-                        <img class="card-img-top" src="https://pras-ops.github.io/prashant.j-Portfolio/images/projects/download%202.png" alt="Exploratory Data Analysis on Travel Insurance Data">
+                        <img class="card-img-top" src="/images/projects/download%202.png" alt="Exploratory Data Analysis on Travel Insurance Data">
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
+                            
+                            <span class="badge badge-secondary">Python</span>
                             
                         </div>
                         <h5 class="card-title bg-transparent mt-1">Exploratory Data Analysis on Travel Insurance Data</h5>
@@ -1361,10 +1450,12 @@ Pj
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card my-3 h-100" title="Exploratory Data Analysis on Marketing-Data">
                     <div class="card-head">
-                        <img class="card-img-top" src="https://pras-ops.github.io/prashant.j-Portfolio/images/projects/download%20%281%29.png" alt="Exploratory Data Analysis on Marketing-Data">
+                        <img class="card-img-top" src="/images/projects/download%20%281%29.png" alt="Exploratory Data Analysis on Marketing-Data">
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
+                            
+                            <span class="badge badge-secondary">Python</span>
                             
                         </div>
                         <h5 class="card-title bg-transparent mt-1">Exploratory Data Analysis on Marketing-Data</h5>
@@ -1527,7 +1618,21 @@ Pj
             </div>
         </div>
     </div>
+    <div id="contact-form-status"></div>
 </section>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check-circle-fill" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+  </symbol>
+  <symbol id="info-fill" viewBox="0 0 16 16">
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+  </symbol>
+  <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </symbol>
+</svg>
 
   </div><footer>
     <div class="container py-3" id="recent-posts">
@@ -1583,8 +1688,14 @@ Pj
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
             <div class="pb-2">
-                <a href="https://pras-ops.github.io/prashant.j-Portfolio/" title="Pj">
-</footer><script src="https://pras-ops.github.io/prashant.j-Portfolio/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+                </a>
+            </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 <script>
     if (document.body.className.includes("dark")) {
         document.body.classList.remove('dark');
@@ -1611,18 +1722,17 @@ Pj
 
 </script>
 
-<script>
-    let loadingIcons;
 
-    function loading() {
-        myVar = setTimeout(showPage, 100);
-    }
 
-    function showPage() {
-        try{
-            document.getElementById("loading-icons").style.display = "block";
-        } catch(err) {}
-    }
-</script></body>
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
 
 </html>

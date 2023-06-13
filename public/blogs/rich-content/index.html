@@ -4,7 +4,8 @@
 <head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="icon" href=https://pras-ops.github.io/prashant.j-Portfolio/fav.png type="image/gif">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav1.png type="image/gif">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,25 +24,25 @@
 </noscript>
 
 
-<link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/css/font.css" media="all">
+<link rel="stylesheet" href="/css/font.css" media="all">
 
 
 
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-43BC2MRVRW"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-43BC2MRVRW', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-43BC2MRVRW', { 'anonymize_ip': false });
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 <meta property="og:title" content="Rich Content" />
 <meta property="og:description" content="Hugo ships with several Built-in Shortcodes for rich content, along with a Privacy Config and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.
 Gist Simple Shortcode {{&lt; gist spf13 7896402 &#34;img.html&#34; &gt;}} Twitter Simple Shortcode {{&lt; tweet GoHugoIO 1315233626070503424 &gt;}} Profile is a customizable single-page portfolio theme for Hugo featuring a contact form and blog. Made by @gurusabarishh.https://t.co/KwYcwfdy16
-&mdash; GoHugo.io (@GoHugoIO) October 11, 2020 Vimeo Simple Shortcode {{&lt; vimeo 146022717 &gt;}} Youtube Simple Shortcode {{&lt; youtube w7Ft2ymGmfc &gt;}} " />
+&mdash; GoHugo.io (@GoHugoIO) October 11, 2020 Vimeo Simple Shortcode {{&lt; vimeo 146022717 &gt;}} Youtube Simple Shortcode {{&lt; youtube w7Ft2ymGmfc &gt;}} Theme Custom Shortcodes These shortcodes are not Hugo built-ins, but are provided by the theme." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pras-ops.github.io/prashant.j-Portfolio/blogs/rich-content/" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2021-04-03T19:53:33+05:30" />
@@ -52,14 +53,14 @@ Gist Simple Shortcode {{&lt; gist spf13 7896402 &#34;img.html&#34; &gt;}} Twitte
 <meta name="twitter:title" content="Rich Content"/>
 <meta name="twitter:description" content="Hugo ships with several Built-in Shortcodes for rich content, along with a Privacy Config and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.
 Gist Simple Shortcode {{&lt; gist spf13 7896402 &#34;img.html&#34; &gt;}} Twitter Simple Shortcode {{&lt; tweet GoHugoIO 1315233626070503424 &gt;}} Profile is a customizable single-page portfolio theme for Hugo featuring a contact form and blog. Made by @gurusabarishh.https://t.co/KwYcwfdy16
-&mdash; GoHugo.io (@GoHugoIO) October 11, 2020 Vimeo Simple Shortcode {{&lt; vimeo 146022717 &gt;}} Youtube Simple Shortcode {{&lt; youtube w7Ft2ymGmfc &gt;}} "/>
+&mdash; GoHugo.io (@GoHugoIO) October 11, 2020 Vimeo Simple Shortcode {{&lt; vimeo 146022717 &gt;}} Youtube Simple Shortcode {{&lt; youtube w7Ft2ymGmfc &gt;}} Theme Custom Shortcodes These shortcodes are not Hugo built-ins, but are provided by the theme."/>
 
 
-<link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/css/header.css" media="all">
-<link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/css/footer.css" media="all">
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
 
 
-<link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/css/theme.css" media="all">
+<link rel="stylesheet" href="/css/theme.css" media="all">
 
 
 
@@ -87,13 +88,40 @@ Gist Simple Shortcode {{&lt; gist spf13 7896402 &#34;img.html&#34; &gt;}} Twitte
         line-height: 1.5;
         text-align: left;
     }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
 </style>
 
 <meta name="description" content="">
-<link rel="stylesheet" href="https://pras-ops.github.io/prashant.j-Portfolio/css/single.css">
+<link rel="stylesheet" href="/css/single.css">
 
 
-<script defer src="https://pras-ops.github.io/prashant.j-Portfolio/fontawesome-5/all-5.15.4.js"></script>
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
 
   <title>
 Rich Content | Pj
@@ -101,18 +129,26 @@ Rich Content | Pj
   </title>
 </head>
 
-<body class="light" onload="loading()">
+<body class="light">
   
   
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
 </script>
 
 
@@ -121,13 +157,15 @@ Rich Content | Pj
     <nav class="pt-3 navbar navbar-expand-lg animate">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             
-            <a class="navbar-brand primary-font text-wrap" href="https://pras-ops.github.io/prashant.j-Portfolio/">
+            <a class="navbar-brand primary-font text-wrap" href="/prashant.j-Portfolio">
                 
-                <img src="https://pras-ops.github.io/prashant.j-Portfolio/fav.png" width="30" height="30"
+                <img src="/fav1.png" width="30" height="30"
                     class="d-inline-block align-top">
                 Pj
                 
             </a>
+
+            
 
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
@@ -141,72 +179,89 @@ Rich Content | Pj
             <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
                 <ul class="navbar-nav ms-auto text-center">
                     
+
+                    
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://pras-ops.github.io/prashant.j-Portfolio/#about" aria-label="about">About</a>
+                        <a class="nav-link" href="/prashant.j-Portfolio#about" aria-label="about">
+                            About Me
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://pras-ops.github.io/prashant.j-Portfolio/#experience"
-                            aria-label="experience">Experience</a>
+                        <a class="nav-link" href="/prashant.j-Portfolio#experience"
+                            aria-label="experience">
+                            Experience
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://pras-ops.github.io/prashant.j-Portfolio/#education"
-                            aria-label="education">Education</a>
+                        <a class="nav-link" href="/prashant.j-Portfolio#education"
+                            aria-label="education">
+                            Education
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://pras-ops.github.io/prashant.j-Portfolio/#projects"
-                            aria-label="projects">Projects</a>
+                        <a class="nav-link" href="/prashant.j-Portfolio#projects"
+                            aria-label="projects">
+                            Projects
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://pras-ops.github.io/prashant.j-Portfolio/#achievements"
-                            aria-label="achievements">Achievements</a>
+                        <a class="nav-link" href="/prashant.j-Portfolio#achievements"
+                            aria-label="achievements">
+                            Achievements
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="https://pras-ops.github.io/prashant.j-Portfolio/#contact"
-                            aria-label="contact">Contact</a>
+                        <a class="nav-link" href="/prashant.j-Portfolio#contact"
+                            aria-label="contact">
+                            Contact
+                        </a>
                     </li>
                     
 
                     
                     
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
                 </ul>
 
-                
-                
-                <div class="text-center">
-                    <button id="theme-toggle">
-                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                    </button>
-                </div>
-            
-                
             </div>
         </div>
     </nav>
@@ -220,14 +275,16 @@ Rich Content | Pj
           <div class="title mb-5">
             <h1 class="text-center mb-4">Rich Content</h1>
             <div class="text-center">
-              Gurusabarish
+              Gurusabarish 
               <small>|</small>
               Apr 3, 2021
+
+              
             </div>
           </div>
           
           <div class="featured-image">
-            <img class="img-fluid" src="https://pras-ops.github.io/prashant.j-Portfolio/images/post.jpg" alt="Rich Content">
+            <img class="img-fluid" src="/images/post.jpg" alt="Rich Content">
           </div>
           
           <article class="page-content  p-2">
@@ -263,7 +320,16 @@ Rich Content | Pj
 </div>
 
 <br>
-
+<h2 id="theme-custom-shortcodes">Theme Custom Shortcodes</h2>
+<p>These shortcodes are not Hugo built-ins, but are provided by the theme.</p>
+<h3 id="responsive-images-with-cloudinary">Responsive Images with Cloudinary</h3>
+<p>You can learn more about this <a href="https://cloudinary.com/documentation/responsive_images">here</a>.</p>
+<p>Set the <code>cloudinary_cloud_name</code> parameter in your site config to use this shortcode.</p>
+<pre tabindex="0"><code>{{&lt; dynamic-img src=&#34;/my/image/on/cloudinary&#34; title=&#34;A title for the image&#34; &gt;}}
+</code></pre><p>Note that you do not include the file extension (e.g. <code>.png</code>) in the <code>src</code> parameter, as the shortcode will automatically determine the best quality and format for the user&rsquo;s device.</p>
+<p>Optionally, you can customize the general CSS styles for the image:</p>
+<pre tabindex="0"><code>{{&lt; dynamic-img src=&#34;/my/image/on/cloudinary&#34; title=&#34;A title for the image&#34; style=&#34;max-width:60%&#34; &gt;}}
+</code></pre>
           </article>
         </div>
       </div>
@@ -281,6 +347,11 @@ Rich Content | Pj
     <li><a href="#twitter-simple-shortcode">Twitter Simple Shortcode</a></li>
     <li><a href="#vimeo-simple-shortcode">Vimeo Simple Shortcode</a></li>
     <li><a href="#youtube-simple-shortcode">Youtube Simple Shortcode</a></li>
+    <li><a href="#theme-custom-shortcodes">Theme Custom Shortcodes</a>
+      <ul>
+        <li><a href="#responsive-images-with-cloudinary">Responsive Images with Cloudinary</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
               </div>
@@ -318,7 +389,7 @@ Rich Content | Pj
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="mailto:?subject=Rich%20Content&amp;body=Check out this site https%3a%2f%2fpras-ops.github.io%2fprashant.j-Portfolio%2fblogs%2frich-content%2f">
+                  <a target="_blank" href='mailto:?subject=Rich%20Content&amp;body=Check%20out%20this%20site https%3a%2f%2fpras-ops.github.io%2fprashant.j-Portfolio%2fblogs%2frich-content%2f'>
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
@@ -359,6 +430,8 @@ Rich Content | Pj
   </button>
 </section>
 
+
+
 <script>
   var topScroll = document.getElementById("topScroll");
   window.onscroll = function() {scrollFunction()};
@@ -376,6 +449,8 @@ Rich Content | Pj
     document.documentElement.scrollTop = 0;
   }
 </script>
+
+
 
 
   </div><footer>
@@ -432,8 +507,14 @@ Rich Content | Pj
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
             <div class="pb-2">
-                <a href="https://pras-ops.github.io/prashant.j-Portfolio/" title="Pj">
-</footer><script src="https://pras-ops.github.io/prashant.j-Portfolio/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+                </a>
+            </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 <script>
     if (document.body.className.includes("dark")) {
         document.body.classList.remove('dark');
@@ -460,18 +541,17 @@ Rich Content | Pj
 
 </script>
 
-<script>
-    let loadingIcons;
 
-    function loading() {
-        myVar = setTimeout(showPage, 100);
-    }
 
-    function showPage() {
-        try{
-            document.getElementById("loading-icons").style.display = "block";
-        } catch(err) {}
-    }
-</script></body>
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
 
 </html>
