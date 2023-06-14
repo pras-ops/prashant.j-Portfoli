@@ -1,6 +1,6 @@
-baseURL: https://pras-ops.github.io/prashant.j-Portfolio/
+baseURL: "https://pras-ops.github.io/prashant.j-Portfolio/"
 languageCode: "en-us"
-title: "Hugo Profile"
+title: "Pj"
 theme: hugo-profile
 
 outputs:
@@ -14,26 +14,26 @@ outputs:
 
 Paginate: 3
 enableRobotsTXT: true
-# disqusShortname: your-disqus-shortname
-# googleAnalytics: G-MEASUREMENT_ID
+disqusShortname: profile
+googleAnalytics: "G-43BC2MRVRW"
 
 markup:
   goldmark:
     renderer:
       unsafe: true
 
-Menus:
-  main:
-    - identifier: blog
-      name: Blog
-      title: Blog posts
-      url: /blogs
-      weight: 1
-    - identifier: gallery
-      name: Gallery
-      title: Blog posts
-      url: /gallery
-      weight: 2
+#Menus:
+#  main:
+#    - identifier: blog
+#      name: Blog
+#      title: Blog posts
+#      url: /blogs
+#      weight: 1
+#    - identifier: gallery
+#      name: Gallery
+#      title: Blog posts
+#      url: /gallery
+#      weight: 2
     #Dropdown menu
     # - identifier: dropdown
     #   title: Example dropdown menu
@@ -53,10 +53,10 @@ Menus:
     #   weight: 2
 
 params:
-  title: "Hugo Profile"
+  title: "Pj"
   description: Text about my cool site
   # staticPath: ""  # The path to serve the static files from
-  favicon: "/fav.png"
+  favicon: "/fav1.png"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -72,8 +72,8 @@ params:
   animate: true
 
   theme:
-    # disableThemeToggle: true
-    # defaultTheme: "light" # dark
+     disableThemeToggle: false
+     defaultTheme: "light" # dark
 
   font:
     fontSize: 1rem # default: 1rem
@@ -103,8 +103,8 @@ params:
     align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
     # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
     # showBrandLogo: false # Show brand logo in nav bar | default is true
-    brandName: "Hugo Profile" # Brand name for the brand | default is the title variable
-    disableSearch: false
+    brandName: "Pj" # Brand name for the brand | default is the title variable
+    disableSearch: true
     # searchPlaceholder: "Search"
     menus:
       disableAbout: false
@@ -118,232 +118,462 @@ params:
   hero:
     enable: true
     intro: "Hi, my name is"
-    title: "Isabella."
-    subtitle: "I build things for the web"
-    content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
-    image: /images/hero.svg
+    title: "Prashant Jacob."
+#    subtitle: "I build things for the web"
+    content: "Collect, process, analyse and present data from supporting everyday business decisions to driving global change."
+    image: "/images/me6.jpeg"
     bottomImage:
       enable: true
     # roundImage: true # Make hero image circular | default false
     button:
       enable: true
       name: "Resume"
-      url: "#"
-      download: true
-      newPage: false
+      url: "https://drive.google.com/file/d/1RvUXANYXv299viWdRNFCW3MLgRGHzHyJ/view?usp=sharing"
+      download: false
+      newPage: true
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
-          url: https://example.com
-        - icon: fab fa-twitter
-          url: https://example.com
-      customIcons:
-        - icon: /fav.png
-          url: "https://example.com"
+          url: https://github.com/pras-ops
+        - icon: fab fa-linkedin
+          url: https://linkedin.com/in/prashant--j
+      #customIcons:
+      #  - icon: /fav.png
+      #    url: "https://example.com"
 
   # About
   about:
     enable: true
     title: "About Me"
-    image: "/images/me.png"
+    image: "/images/me3.png"
     content: |-
-      I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA.
+      Passionate about uncovering insights through quantitative-driven analysis, I am a prospective data analyst who thrives on posing and answering complex questions. With a hands-on approach to learning, I have honed my skills through personal projects and a valuable internship, emphasizing the importance of an iterative, hypothesis-oriented mindset in analysis.
 
-      I am currently working on a project that will be used to help people find the best way to get around the city.
+       I am eager to leverage that approach as a data analyst.
     skills:
       enable: true
-      title: "Here are a few technologies I've been working with recently:"
+      title:  "Technologies and Tools Proficiencies:"
       items:
+        - "Python"
+        - "SQL"
         - "HTML"
-        - "CSS"
-        - "JavaScript"
-        - "React"
-        - "Node"
-        - "Express"
+        - "NoSQL"
+        - "Tableau"
+        - " Power BI"
+        - "Microsoft Excel"
+        - "Matlab"
+        - "Informatica"
+        - "Alteryx"
 
   # Experience
   experience:
     enable: true
     # title: "Custom Name"
     items:
-      - job: "Senior Software Developer"
-        company: "Facebook"
-        companyUrl: "https://example.com"
-        date: "Jan 2022 - present"
+      - job: "Business Analyst Trainee"
+        company: " MedTourEasy"
+   #    companyUrl: "https://example.com"
+        date: "November 2022 - December 2022"
         featuredLink:
-          enable: true
+          enable: false
           name: "View the project"
           url: "https://example.com"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+        info:
+          enable: false
+        content: |
+          Performed data analysis using Excel and utilized Tableau for data-driven recommendations, improving business strategies and client settlements.
 
-      - job: "Software Developer"
-        company: "Amazon"
-        companyUrl: "https://example.com"
-        date: "Sep 2020 - Dec 2021"
+          - Demonstrated proficient in communicating with technical and non-technical stakeholder
+
+      - job: "Business Analyst Intern"
+        company: " iNeuron"
+#      companyUrl: "https://example.com"
+        date: "September 2021 - April 2022"
         featuredLink:
-          enable: true
+          enable: false
           url: "https://example.com"
         info:
-          enable: true
-          content: I worked as a software developer for more than one year in Amazon.
+          enable: false
         content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+          Streamlined reporting processes by developing Excel macros and SQL queries, reducing report preparation time by 50% and improving accuracy by 95%.
 
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
+          - Forecasted sales trends based on periodic data compilation, enabling sound strategic decision-making using statistical analysis.
+          - Maintained comprehensive project documentation, including high-level and low-level design documents, BRD, FRD, DFDs and DQ reports.
 
-      - job: "Junior Software Developer"
-        company: "Apple"
-        companyUrl: "https://example.com"
-        date: "Jan 2020 - Aug 2020"
+
+      - job: "Matlab Developer Intern"
+        company: "Small Wonders Academy"
+#      companyUrl: "https://example.com"
+        date: "July 2020 - August 2020"
         info:
           enable: false
         featuredLink:
-          enable: true
+          enable: false
           url: "https://example.com"
         content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+          Developed Control Systems (PI, PID) based on mathematical models in Matlab/Simulink, resulting in 95% efficiency.
 
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
+          - Created detailed reports in MATLAB for system performance analysis & improvement identification using data modelling.
 
-      - job: "UI/UX Designer"
-        company: "Netflix"
-        companyUrl: "https://example.com"
-        date: "June 2017 - Nov 2019"
+      - job: "AI-ML Engineer Intern"
+        company: "Genclick"
+#      companyUrl: "https://example.com"
+        date: "September 2019 - May 2020"
         featuredLink:
-          enable: true
+          enable: false
           url: "https://example.com"
+        info:
+          enable: false
         content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+          Co-founded Genclick, a student startup focused on AI and ML solutions for student's.
 
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
+          - Collaborated with a team to build an AI text summarization system that reduced text by 60% while extracting meaningful information.
+          - Assisted in creating a Chatbot system for Customer Services, handling 500 queries per day and improving customer satisfaction ratings.
+          - Developed a content-based filtering recommendation system that increased user engagement by 15%.
 
-      - job: "Product Designer"
-        company: "Google"
-        companyUrl: "https://example.com"
-        date: "Feb 2016 - Mar 2017"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+      - job: "Telecom Engineer Intern"
+        company: "South Eastern Coalfields Limited"
+#      companyUrl: "https://example.com"
+        date: "July 2019 - August 2019"
+        info:
+          enable: false
+        content: |
+          Diagnosed and resolved various networking and system issues using comprehensive diagnostic techniques.
 
+          - Improved data management and system configuration efficiency by utilising advanced Excel functions and techniques.
   # Education
   education:
     enable: true
     # title: "Custom Name"
     index: false
     items:
-      - title: "Master of Business Administration"
+      - title: "Post Graduate Diploma in Artificial Intelligence and Machine Learning"
         school:
-          name: "University of California, Berkeley"
-          url: "https://example.org"
-        date: "2013 - 2015"
-        GPA: "3.8 out of 5.0"
+          name: " National Institute of Technology Warangal, (NIT)"
+          url: "https://www.nitw.ac.in/eict/"
+        date: "2021 - 2022"
+        GPA: "3.50 out of 5.0"
         content: |-
-          Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-      - title: "Bachelor of Science in Computer Science"
+          Projects
+            -  Forecast Cab Booking Demand.
+            -  Handwritten Character Recognition.
+            -  ML Model for Auto Insurance Industry.
+            -  Action Recognition using Pose Estimation.
+            -  Conversational Chatbot
+
+
+      - title: "Bachelor of Technology in  Electronics and Telecommunication Engineering"
         school:
-          name: "Massachusetts Institute of Technology"
-          url: "https://example.org"
-        date: "2009 - 2013"
-        GPA: "3.9 out of 5.0"
+          name: "Chhattisgarh Swami Vivekanand Technical University Bhilai,(CSVTU)"
+          url: "https://csvtu.ac.in/ew/"
+        date: "2018 - 2022"
+        GPA: "8.40 out of 10"
         content: |-
-          I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
-          - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
-          - Face mask detection using a single convolutional neural network.
+          Projects
+          - Major project: Underground Cable Fault Detection using PIC controller and GSM.
+          - Minor project: Health care monitoring project using IoT(ThingSpeak), ESP8266 and Arduino.
 
           Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+            - Conducted a competitive exam called "RESq" as a part of the Smart Club..
+            - Co-founded a student startup called Genclick, where I served as a co-founder and AI-ML engineer. Hired staff for the startup.
         featuredLink:
-          enable: true
+          enable: false
           name: "My academic record"
           url: "https://example.com"
-      - title: "High School"
-        school:
-          name: "Thomas Jefferson High School for Science and Technology."
-          url: "https://example.org"
-        GPA: "4.2 out of 5.0"
-        featuredLink:
-          enable: true
-          url: "https://example.com"
+
+
 
   # Achievements
   achievements:
     enable: true
     # title: "Custom Name"
     items:
-      - title: Google kickstart runner
-        content: I solved all problems with optimal solution.
+      - title: Alteryx Designer Core Micro-Credential
+        content: Data Manipulation
         url: https://example.com
-      - title: Facebook Hackathon Winner
-        content: Developed a product using Artificial Intelligence.
-      - title: Hugo Profile
-        content: Developed a theme and getting 1K+ downloads per month.
+      - title: Alteryx Designer Core Micro-Credential
+        content: General Knowledge
+      - title: Alteryx Machine Learning Fundamentals Micro-Credential
+    #  content: Machine Learning Fundamentals
         url: "https://github.com/gurusabarish/hugo-profile"
-      - title: Microsoft Imagine Runner
-        content: We are developed a product which can help others.
-      - title: Google Summer of Code
-        content: Contributed to a open source project.
-        url: https://example.com
+      - title: Alteryx Foundation Micro-Credential
+  #    content: We are developed a product which can help others.
+      - title: Indian Institute of Information Technology Pune
+        content: Student Training Program on Cloud Computing
+      # url: https://example.com
+      - title: Indian Institute of Information Technology Pune
+        content: Student Training Program on Soft Computing with MATLAB Environment
+      # url: https://example.com
+      - title: Indian Institute of Information Technology Pune
+        content: Student Training Program on Digital System Design
+      # url: https://example.com
+      - title:  Indian Institutes of Technology Bhilai
+        content: Student Training Program on Digital Electronics & FPGA
+      # url: https://example.com  # projects
 
   # projects
   projects:
     enable: true
     # title: "Custom Name"
     items:
-      - title: Hugo Profile
-        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
-        image: /images/projects/profile.png
+      - title: Financial Complaint KPI Dashboard
+        content: The dashboard is an example focusing on financial complaints by state, total number of complaints and complaints by issue. There are two more views specifically focusing on disputed rate and resolved at no cost.
+        image: /images/projects/profile3.png
         featured:
           name: Demo
-          link: https://hugo-profile.netlify.app
+          link: https://public.tableau.com/app/profile/prashant.jacob/viz/FinancialComplaintsDashboardRWFD_16645087186720/Dashboard
         badges:
-          - "Hugo"
-          - "Bootstrap"
-          - "Javascript"
+          - "Tableau"
+        #  - "Bootstrap"
+        #  - "Javascript"
         links:
-          - icon: fa fa-envelope
-            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
+      #  - icon: fa fa-envelope
+      #    url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
           - icon: fab fa-github
-            url: https://github.com/gurusabarish/hugo-profile
-          - icon: fab fa-twitter
-            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+            url: https://github.com/pras-ops/Financial-Complaints-Dashboard-Tableau
+      #  - icon: fab fa-twitter
+      #    url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
 
-      - title: Image Converter
-        content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
-        image: /images/projects/converter.jpg
+      - title: Retail Sales KPI Dashboard
+        content: Often, companies have sales data that contain a lot of hidden information. Asking the right questions and analyzing the data will give you relevant insights. The goal is to answer the right questions that will help the company to make the right sales decisions.
+        image: /images/projects/Retail Sales KPI Dashboard.jpg
         featured:
           name: Demo
-          link: https://django-converter.herokuapp.com
+          link: https://public.tableau.com/app/profile/prashant.jacob/viz/RetailSalesKPIDashboard_16669251454040/RetailSalesDashboard?publish=yes
         badges:
-          - "Django"
-          - "Bootstrap"
+          - "Tableau"
         links:
           - icon: fab fa-github
-            url: https://github.com/gurusabarish/converter
+            url: https://github.com/pras-ops/Retail-Sales-KPI-Dashboard-Tableau-
 
-      - title: Hugo Profile V2
-        content: A clean and simple Hugo template for personal portfolio and blog.
-        image: /images/projects/profile2.jpg
+      - title: Sales Data Analysis Dashboard
+        content: Sales data is enormously powerful and it’s something you come by just by tracking your activities effectively. Knowing how to fully utilize it will revolutionize your sales process, leading to better lead generation, client engagement and retention and, ultimately, more sales.
+        image: /images/projects/Sales Data Analysis Dashboard.png
         featured:
-          name: Demo V2
-          link: https://hugo-profile-2.netlify.app
+          name: Demo
+          link: https://public.tableau.com/app/profile/prashant.jacob/viz/SalesDataAnalysisDashboard_16669674081200/SalesDataAnalysisDashboard?publish=yes
         badges:
-          - "Hugo"
-          - "Bootstrap"
-          - "Javascript"
+         - "Tableau"
+        #   - "Bootstrap"
+        #   - "Javascript"
         links:
           - icon: fab fa-github
-            url: https://github.com/gurusabarish/HugoProfileV2
+            url: https://github.com/pras-ops/Sales-Data-Analysis-Dashboard-Tableau-
+
+
+      - title: Car Price Predictions Summary
+        content: A car price prediction summary is an estimate of the future price on the bases of a car based on the features it can offer a customer like an Engine Size, Number of doors, Wheelbase etc.
+        image: /images/projects/Linear Regression Predictions_page-0001.jpg
+        featured:
+        #  name: Demo
+        #  link: https://public.tableau.com/views/FinancialComplaintsDashboardRWFD_16645087186720/Dashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
+        badges:
+         - "Power BI"
+        #   - "Hugo"
+        #   - "Bootstrap"
+        #   - "Javascript"
+        links:
+      #  - icon: fa fa-envelope
+      #    url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
+          - icon: fab fa-github
+            url: https://github.com/pras-ops/Car-Price-Predictions-Summary-PowerBI
+      #  - icon: fab fa-twitter
+      #    url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+
+      - title: Overall Performance Summary
+        content: An overall performance summary shows that a company creates to measure and define the company’s overall success. Performance reports monitor and analyze the business’ financial data to determine how well they are performing overall.
+        image: /images/projects/profile4.png
+        featured:
+        # name: Demo
+        # link: https://django-converter.herokuapp.com
+        badges:
+         - "Power BI"
+        # badges:
+        #   - "Django"
+        #   - "Bootstrap"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pras-ops/Overall-Performance-Summary-PowerBI
+
+      - title: Sales Overview
+        content: A sales overview dashboard is a collection of metrics, quantitative data and qualitative inputs that helps to evaluate sales performance within a team, region, division or organization.
+        image: /images/projects/Episode 4 - Sales Report_Finished_page-0001.jpg
+        featured:
+        #  name: Demo V2
+        #  link: https://hugo-profile-2.netlify.app
+        badges:
+         - "Power BI"
+        # badges:
+        #   - "Hugo"
+        #   - "Bootstrap"
+        #   - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pras-ops/Sales-Report-PowerBI
+
+      - title: Sales Revenue Analysis Report
+        content: A revenue analysis is a detailed report of the total revenue generated by all company activities. They are utilized by companies to indicate areas in which they can increase revenue with the least effort. A revenue analysis can reveal which products or services sell better or which areas need improvement.
+        image: /images/projects/Screenshot (36).png
+        featured:
+        #  name: Demo
+        #  link: https://public.tableau.com/views/FinancialComplaintsDashboardRWFD_16645087186720/Dashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
+        badges:
+         - "Excel"
+        # badges:
+        #   - "Hugo"
+        #   - "Bootstrap"
+        #   - "Javascript"
+        links:
+      #  - icon: fa fa-envelope
+      #    url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
+          - icon: fab fa-github
+            url: https://github.com/pras-ops/Excel-SALES-REVENUE-ANALYSIS
+      #  - icon: fab fa-twitter
+      #    url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+
+      - title: Performance Dashboard
+        content: Performance dashboard compare results in relation to prior years' results in order to show whether performance is stable, improving or declining. The purpose is to better contextualize the performance information in relation to historical performance and targets or goals that might have been set.
+        image: /images/projects/Screenshot (37).png
+        featured:
+        # name: Demo
+        # link: https://django-converter.herokuapp.com
+        badges:
+         - "Excel"
+        # badges:
+        #   - "Django"
+        #   - "Bootstrap"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pras-ops/Excel-Performance-Dashboard
+
+      - title: Management Information System (MIS) report
+        content: Management Information System(MIS) reports help management to assess the performance of the organization and allows for faster decision-making.
+        image: /images/projects/profile6.png
+        featured:
+        #  name: Demo V2
+        #  link: https://hugo-profile-2.netlify.app
+        badges:
+         - "Excel"
+        # badges:
+        #   - "Hugo"
+        #   - "Bootstrap"
+        #   - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pras-ops/MIS-Report-Excel-
+
+      - title: SQL Case Study
+        content: The data set consists of sales records, the task is to analyze the sales and performance of the company. In June 2020 - large scale supply changes were made at the company. All the products now use sustainable packaging methods in every single step from the farm all the way to the customer, so the company needs to quantify the impact of this change on the sales performance and its separate business areas.
+        image: /images/projects/Screenshot (35).png
+        featured:
+        #  name: Demo
+        #  link: https://public.tableau.com/views/FinancialComplaintsDashboardRWFD_16645087186720/Dashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
+        badges:
+         - "MySql"
+        # badges:
+        #   - "Hugo"
+        #   - "Bootstrap"
+        #   - "Javascript"
+        links:
+      #  - icon: fa fa-envelope
+      #    url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
+          - icon: fab fa-github
+            url: https://github.com/pras-ops/SQL-Case-Study-sales-data-
+      #  - icon: fab fa-twitter
+      #    url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+
+      - title: SQL Case Study
+        content: The company has started a new business of selling burgers due to the growing popularity of fast food in the current economy, so the company needs to analyze the sales and performance of the company.
+        image: /images/projects/Screenshot (393).png
+        featured:
+        # name: Demo
+        # link: https://django-converter.herokuapp.com
+        badges:
+         - "MySql"
+        # badges:
+        #   - "Django"
+        #   - "Bootstrap"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pras-ops/SQL-Case-Study-FastFOOD
+
+      - title: SQL Case Study
+        content: COVID-19 continues to be the major challenge for governments, health care agencies, and businesses all over the world. Many governments have instituted lockdowns, businesses have closed, and people everywhere have been practicing social distancing to slow the spread of the virus.we’ll use SQL to predict the number of COVID-19 cases day by day.
+        image: /images/projects/star schema.webp
+        featured:
+        #  name: Demo V2
+        #  link: https://hugo-profile-2.netlify.app
+        badges:
+         - "MySql"
+        # badges:
+        #   - "Hugo"
+        #   - "Bootstrap"
+        #   - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pras-ops/SQL-CASE-STUDY-Covid19
+
+      - title: Exploratory Data Analysis on Sales Data
+        content: The approach is to analyzing datasets to summarize their main characteristics of sales. It is used to understand data, for correlation between sales quantity and discount, understand the variables and the relationships between them.
+        image: /images/projects/download.png
+        featured:
+        #  name: Demo
+        #  link: https://public.tableau.com/views/FinancialComplaintsDashboardRWFD_16645087186720/Dashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
+        badges:
+         - "Python"
+        # badges:
+        #   - "Hugo"
+        #   - "Bootstrap"
+        #   - "Javascript"
+        links:
+      #  - icon: fa fa-envelope
+      #    url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
+          - icon: fab fa-github
+            url: https://github.com/pras-ops/Exploratory-Data-Analysis-Sales-Data
+      #  - icon: fab fa-twitter
+      #    url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+
+      - title: Exploratory Data Analysis on Travel Insurance Data
+        content: A Tour & Travels Company Is Offering Travel Insurance Package To Their Customers.The Company Requires To Know The Which Customers Would Be Interested To Buy It Based On Its Database History.The Insurance Was Offered To Some Of The Customers In 2019 And The Given Data Has Been Extracted From The Performance/Sales Of The Package During That Period.The task is to analyze the data and give some meaningful insights.
+        image: /images/projects/download 2.png
+        featured:
+        # name: Demo
+        # link: https://django-converter.herokuapp.com
+        badges:
+         - "Python"
+        # badges:
+        #   - "Django"
+        #   - "Bootstrap"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pras-ops/Exploratory-Data-Analysis-on-Travel-Insurance-Data
+
+      - title: Exploratory Data Analysis on Marketing-Data
+        content: The business problem is a binary classification problem. The classification goal is to predict if the client contacted through the marketing campaign will subscribe a term deposit.
+        image: /images/projects/download (1).png
+        featured:
+        #  name: Demo V2
+        #  link: https://hugo-profile-2.netlify.app
+        badges:
+         - "Python"
+        # badges:
+        #   - "Hugo"
+        #   - "Bootstrap"
+        #   - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pras-ops/EDA_on_Marketing-Data
+
+
+
+
 
   #Contact
   contact:
     enable: true
     # title: "Custom Name"
     content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
-    email: gurusabarisha@gmail.com
+    email: jacobprashant20@gmail.com
     btnName: Mail me
     # formspree:
     #   enable: true # `contact.email` value will be ignored
@@ -356,14 +586,14 @@ params:
       path: "blogs"
       count: 3
       title: Recent Posts
-      enable: true
+      enable: false
       disableFeaturedImage: false
     socialNetworks:
-      github: https://github.com
-      linkedin: https://linkedin.com
-      twitter: https://twitter.com
-      instagram: https://instagram.com
-      facebook: https://facebook.com
+      github: https://github.com/pras-ops
+      linkedin: https://linkedin.com/in/prashant--j
+    #  twitter: https://twitter.com
+    #  instagram: https://instagram.com
+    #  facebook: https://facebook.com
 
   # List pages like blogs and posts
   listPages:
@@ -372,10 +602,10 @@ params:
   # Single pages like blog and post
   singlePages:
     readTime:
-      enable: true
+      enable: false
       content: "min read"
     scrollprogress:
-      enable: true
+      enable: false
 
   # For translations
   terms:
